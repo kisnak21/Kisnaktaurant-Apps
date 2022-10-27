@@ -228,48 +228,7 @@ main {
    * restaurant item
    */
 
-.restaurant-item {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-}
 
-.restaurant-item__content {
-  padding: 16px;
-}
-
-.restaurant-item__thumbnail {
-  width: 100%;
-}
-
-.restaurant-item__rating {
-  font-size: 10px;
-  text-transform: uppercase;
-  color: #999;
-}
-
-.restaurant-item__title {
-  font-weight: 500;
-  font-size: 16px;
-  margin-top: 16px;
-  transition: 0.3s opacity;
-}
-
-.restaurant-item__title:hover {
-  opacity: 0.5;
-}
-
-.restaurant-item__title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.restaurant-item__description {
-  margin-top: 16px;
-  font-size: 12px;
-  line-height: 1.5em;
-}
 
 /*
    * footer
