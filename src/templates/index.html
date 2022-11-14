@@ -1,59 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-      content="Get everything you need to sew your next garment. Open Monday-Friday 8-5pm, located in the Food District" />
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-    <title>Kisnaktaurant App</title>
-  </head>
-
-  <body>
-    <a href="#maincontent" class="skip-link">Menuju Content</a>
-    <header class="header">
-      <div class="header__inner">
-        <h1 class="header__title">Kisnaktaurant App</h1>
-        <button id="menu" class="header__menu" aria-label="navigation-menu">☰</button>
-      </div>
-    </header>
-
-    <nav id="drawer" class="nav">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free restaurant delicious for you">
+  <meta name="theme-color" content="#DB0000"/>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.png">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="manifest" href="./app.webmanifest">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  
+  <title>Kisnaktaurant</title>
+</head>
+<body>
+  <a href="#/explore" class="skip-link" tabindex="0">Menuju Content</a>
+  <header class="app-bar">
+    <div class="app-bar__menu">
+      <button id="hamburgerButton">☰</button>
+    </div>
+    <div class="app-bar__brand">
+      <h1><a href="/">Kisnaktaurant</a></h1>
+    </div>
+    <nav id="navigationDrawer" class="app-bar__navigation">
       <ul>
-        <li class="nav__item"><a href="/">Home</a></li>
-        <li class="nav__item"><a href="/">Favorite</a></li>
-        <li class="nav__item">
-          <a href="https://github.com/kisnak21" target="_blank">About Us</a>
-        </li>
+        <li><a href="#/explore">Explore</a></li>
+        <li><a href="#/favorite">Favorite</a></li>
+        <li><a href="https://github.com/kisnak21" target="_blank">About Us</a></li>
       </ul>
     </nav>
-
-    <div class="hero">
-      <div class="hero__inner">
-        <h1 class="hero__title">Get Your Stuff Here!</h1>
-        <p class="hero__tagline">Be Happy With Our Stuff!</p>
+  </header>
+  <div class="hero">
+  </div>
+  <main id="mainContent" tabindex="0">
+    <div class="tagline">
+      <h1>Get Your Favorite Restaurant!</h1>
+      <button><a href="#/explore">Explore Restaurant</a></button>
+    </div>
+  </main>
+  <footer class="footer-container">
+    <div class="footer-left">
+      <h3>Kisnaktaurant</h3>
+      <p class="footer-links">
+        <a href="#">Home</a>
+        |
+        <a href="#/explore">Explore</a>
+        |
+        <a href="#/favorite">Favorite</a>
+        |
+        <a href="https://github.com/kisnak21" target="_blank">About Us</a>
+      </p>
+      <p class="footer-credit">copyright &copy; Kisnaktaurant - 2022</p>
+    </div>
+    <div class="footer-center">
+      <div>
+        <h3>Contact</h3>
+        <i class="fa fa-map-marker"></i>
+          <p>Pontianak, Indonesia 78391</p>
+      </div>
+      <div>
+        <i class="fa fa-whatsapp"></i>
+        <p>+62856 5464 2858</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:krisnastya21@gmail.com">krisnastya21@gmail.com</a></p>
       </div>
     </div>
-    <main id="maincontent">
-      <section class="content">
-        <div class="explore">
-          <h1 class="explore__label">Explore Restaurant</h1>
-
-          <!-- import data restaurants using DOM -->
-          <div class="restaurants"></div>
-
-        </div>
-      </section>
-    </main>
-    <footer>
-      <a>Copyright © 2022 - Kisnaktaurant Apps</a>
-  </body>
-
+    <div class="footer-right">
+      <p class="footer-about">
+        <span>About the Restaurant</span>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium tempore nam eum optio asperiores. Cum reprehenderit impedit ipsa cupiditate blanditiis recusandae inventore dolorum, facilis id illum ex quod, deleniti dolor.</p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
