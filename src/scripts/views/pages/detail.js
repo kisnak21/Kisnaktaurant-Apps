@@ -2,7 +2,7 @@ import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import {
   createRestoDetailTemplate,
-  createLikeButtonTemplate,
+  createLikeRestoButtonTemplate,
   RestoDrinksTemplate,
   RestoFoodsTemplate,
   RestoReviewTemplate,
@@ -48,7 +48,7 @@ const Detail = {
     const likeButtonContainer = document.querySelector('#likeButtonContainer');
 
     restaurantContainer.innerHTML = createRestoDetailTemplate(restaurant);
-    likeButtonContainer.innerHTML = createLikeButtonTemplate();
+    likeButtonContainer.innerHTML = createLikeRestoButtonTemplate();
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
