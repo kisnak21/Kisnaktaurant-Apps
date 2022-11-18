@@ -26,6 +26,18 @@ const Detail = {
                     <h5>Reviews</h5>
                   </div>
   <div id="review" class="section"></div>
+  <div class="content-title">
+              <h5>
+                Add Your Comment
+              </h5>
+            <form class="section" id="form-review">
+              <input type="text" placeholder="Your Name" class="form-name" id="input-name" required />
+              <input type="text" placeholder="Your Comment" class="form" id="input-review" required />
+              <button type="submit" id="add" class="btn-review">
+                 Review
+              </button>
+            </form>
+          </div>
       `;
   },
 
@@ -64,6 +76,26 @@ const Detail = {
     const reviewContainer = document.querySelector('#review');
     reviews.forEach((review) => {
       reviewContainer.innerHTML += RestoReviewTemplate(review);
+    });
+
+    const nameinput = document.querySelector('#input-name');
+    const reviewinput = document.querySelector('#input-review');
+    const reviewsubmit = document.querySelector('#add');
+    reviewsubmit.addEventListener('click', async (event) => {
+      const review = {
+        id: restaurant.id,
+        name: nameinput.value,
+        review: reviewinput.value,
+      };
+      if (nameinput.value === '' || reviewinput.value === '') {
+        alert('Required name and review!!');
+      } else {
+        event.preventDefault();
+        await RestaurantSource.addReview(review).then(() => {
+          location.reload();
+          alert('Thanks for review');
+        });
+      }
     });
   },
 };

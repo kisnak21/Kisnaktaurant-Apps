@@ -471,3 +471,39 @@ footer {
     margin-bottom: 0;
     font-size: 15px;
 }
+
+.form {
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+  padding-left: 20px;
+  padding-top: 12px;
+  height: 110px;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 24px;
+  border: 3px solid #555;
+}
+.form-name {
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+  padding-left: 20px;
+  height: 70px;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 24px;
+  border: 3px solid #555;
+}
+
+.btn-review {
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #a2d2ff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 2px;
+}
