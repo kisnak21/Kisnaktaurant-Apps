@@ -7,7 +7,7 @@ Before(({ I }) => {
 });
 
 Scenario('showing empty liked restaurants', ({ I }) => {
-  I.seeElement('#query');
+  I.seeElement('#restaurants');
   I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
 });
 
@@ -16,9 +16,9 @@ Scenario('liking one restaurant', async ({ I }) => {
 
   I.amOnPage('/');
 
-  I.seeElement('.restaurant__title a');
+  I.seeElement('.restaurant-item__content');
 
-  const firstResto = locate('.restaurant__title a').first();
+  const firstResto = locate('.restaurant-item__content').first();
   const firstRestoTitle = await I.grabTextFrom(firstResto);
   I.click(firstResto);
 
@@ -37,7 +37,7 @@ Scenario('searching restaurants', async ({ I }) => {
 
   I.amOnPage('/');
 
-  I.seeElement('.restaurant__title a');
+  I.seeElement('.restaurant__title');
 
   const titles = [];
 
@@ -50,12 +50,12 @@ Scenario('searching restaurants', async ({ I }) => {
   }
 
   I.amOnPage('/#/like');
-  I.seeElement('#query');
+  I.seeElement('#restaurants');
 
   const searchQuery = titles[1].substring(1, 3);
   const matchingRestaurant = titles.filter((title) => title.indexOf(searchQuery) !== -1);
 
-  I.fillField('#query', searchQuery);
+  I.fillField('#restaurants', searchQuery);
   I.pressKey('Enter');
 
   const visibleLikedRestaurants = await I.grabNumberOfVisibleElements('.restaurant-item');

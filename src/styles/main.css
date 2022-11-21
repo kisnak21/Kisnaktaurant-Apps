@@ -109,15 +109,11 @@ body {
    * Jumbotron
    */
 
-.hero {
-  display: flex;
-  align-items: center;
-  min-height: 380px;
+.hero img {
   width: 100%;
-  text-align: center;
-  background-image: url("../public/images/heros/hero-2.jpg");
-  background-position: center;
-  background-color: green;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
 }
 
 
@@ -143,6 +139,11 @@ main {
   text-align: center;
 }
 
+.tagline a {
+  display: block;
+  min-height: 44px;
+  min-width: 44px;
+}
 #mainContent button {
   min-height: 44px;
   min-width: 44px;

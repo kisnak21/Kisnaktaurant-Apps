@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import {
@@ -8,6 +9,7 @@ import {
   RestoReviewTemplate,
 } from '../template-creator';
 import LikeButtonInitiator from '../../utils/like-button-presenter';
+import favoriteRestaurant from '../../data/favorite-restaurant-idb';
 
 const Detail = {
   async render() {
@@ -52,6 +54,7 @@ const Detail = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteResto: favoriteRestaurant,
       restaurant: {
         id: restaurant.id,
         name: restaurant.name,
@@ -88,12 +91,29 @@ const Detail = {
         review: reviewinput.value,
       };
       if (nameinput.value === '' || reviewinput.value === '') {
-        alert('Required name and review!!');
+        // alert('Required name and review!!');
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Required name and review!!',
+          showConfirmButton: false,
+          timer: 1500,
+        });
       } else {
         event.preventDefault();
-        await RestaurantSource.addReview(review).then(() => {
-          location.reload();
-          alert('Thanks for review');
+        Swal.fire({
+          title: `Do you want to review ${restaurant.name}?`,
+          showDenyButton: true,
+          showCancelButton: true,
+          confirmButtonText: 'Yes',
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            Swal.fire('Thanks for review!', '', 'success').then(
+              await RestaurantSource.addReview(review).then(() => {
+                location.reload();
+              }),
+            );
+          }
         });
       }
     });
