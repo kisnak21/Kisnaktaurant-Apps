@@ -18,4 +18,4 @@ Kisnaktaurant App adalah aplikasi yang saya bangun berdasarkan apa yang saya pel
 <br>
 
 ## Demo Application
-[Kisnaktaurants App]('https://kisnaktaurants-app.netlify.app/')
+Netlify: [Kisnaktaurants App](https://kisnaktaurants-app.netlify.app/)
