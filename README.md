@@ -15,3 +15,6 @@ Kisnaktaurant App adalah aplikasi yang saya bangun berdasarkan apa yang saya pel
 ## Lighthouse test with chrome devtools
 ![image](https://user-images.githubusercontent.com/64366825/202953639-eb7af04f-d950-4b85-b161-baac53ea8a3c.png)
 
+<br>
+## Demo Application
+(Kisnaktaurants App)['https://kisnaktaurants-app.netlify.app/']
