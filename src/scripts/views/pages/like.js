@@ -17,6 +17,9 @@ const Like = {
     const restaurants = await favoriteRestaurant.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
 
+    if (restaurants.length === 0) {
+      restaurantsContainer.innerHTML += '<h2 class="restaurant-item__not__found">Tidak ada restaurant untuk ditampilkan</h2>';
+    }
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestoItemTemplate(restaurant);
     });

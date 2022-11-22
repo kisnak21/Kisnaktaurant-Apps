@@ -226,6 +226,13 @@ main {
   -webkit-line-clamp: 4; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+
+.restaurant-item__not__found {
+  font-size: medium;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+}
  
  
 /*
